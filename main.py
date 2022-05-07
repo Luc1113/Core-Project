@@ -6,26 +6,37 @@ import actions as a #functions from actions file
 
 def start_loop():
   if loops==0:
-    a.cprint(fileRead(""))
+    a.cprint(str(fileRead("text/0loop.txt")))
   elif loops==1:
     a.cprint("Placeholder text for waking up after first loop")
   else:
     a.cprint("Placeholder text for waking up after subsequent loops.")
 
 def fileRead(file):
-  return "Don't mind this, just need to test the program"
+  temp_file = open(file, 'r')
+  return temp_file.read()
 
 def get_action():
   print()
   action = input("> ")
   action = action.split()
+  
   if action[0] == "HELP":
     if len(action) == 1:
       a.print_help("ALL")
     else:
       a.print_help(action[1])
+
+  elif action[0] == "LOOK":
+    if (len(action) >= 3) and action[1] == "AT":
+      a.look(action[2])
+    elif len(action)>=2:
+      a.look(action[1])
+    else:
+      a.cprint("What are you looking at?")
+    
   else:
-    a.cprint("Invalid action. Use \"HELP\" to get a list of actions")
+    a.cprint("Invalid action. Use \"HELP\" to get a list of actions.")
     get_action()
 
 def main():

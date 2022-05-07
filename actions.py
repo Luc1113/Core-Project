@@ -18,17 +18,23 @@ return null
 
 def print_help(action):
   if action == "ALL":
-    cprint("HELP")
-    cprint("GO")
-    cprint("LOOK")
-    cprint("EQUIP")
-    cprint("UNEQUIP")
-  if action == "HELP":
+    cprint()
+  elif action == "HELP":
     cprint("HELP")
     cprint("Prints out a list of valid actions.")
     cprint("HELP [action]")
     cprint("Prints a description for the action.")
-  if action in ["GO","MOVE","WALK"]:
+    cprint("Neither of these actions takes any time.")
+  elif action in ["GO","MOVE","WALK"]:
     cprint("GO [location]#Go to the location listed, if you can access it from#your current location.#Synonyms: GO, MOVE, WALK")
-  if action == ["LOOK"]:
-    cprint("LOOK [object]#Looks at the object listed, if you can access it from#your current location.#")
+  elif action == "LOOK":
+    cprint("LOOK [object]#Looks at the object listed, if you can access it from#your current location.#LOOK EQUIPPED#Prints a list of your equipped objects.#Synonyms: LOOK, LOOK AT")
+  elif action == "EQUIP":
+    cprint("EQUIP [object]#Equips the object listed, if you can access it from#your current location.")
+  elif action == "UNEQUIP":
+    cprint("UNEQUIP [object]#Uniequips the object listed.")
+  else:
+    cprint("Invalid action. Use \"HELP\" to get a list of actions.")
+
+def look(action):
+  cprint("You look at the "+action+". It is very majestic.")
