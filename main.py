@@ -5,13 +5,11 @@ import helpers as h
 
 def start_loop():
   if loops==0:
-    h.fileRead("text/0loop.txt")
+    h.file_print("text/0loop.txt")
   elif loops==1:
     h.cprint("Placeholder text for waking up after first loop")
   else:
     h.cprint("Placeholder text for waking up after subsequent loops.")
-
-
 
 def get_action():
   print()

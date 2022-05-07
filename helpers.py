@@ -16,6 +16,11 @@ str: string to be printed, but cooler
 return null
 """
 
-def fileRead(file):
+def file_get(file):
   temp_file = open(file, 'r')
-  cprint(temp_file.read())
+  temp = temp_file.read()
+  temp_file.close()
+  return temp
+
+def file_print(file):
+  cprint(file_get(file))
