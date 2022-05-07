@@ -29,6 +29,6 @@ def print_help(action):
     cprint("HELP [action]")
     cprint("Prints a description for the action.")
   if action in ["GO","MOVE","WALK"]:
-    cprint("GO [location]")
-    cprint("Go to the location listed, if you can access it from#your current location.")
-    cprint("Synonyms: GO, MOVE, WALK")
+    cprint("GO [location]#Go to the location listed, if you can access it from#your current location.#Synonyms: GO, MOVE, WALK")
+  if action == ["LOOK"]:
+    cprint("LOOK [object]#Looks at the object listed, if you can access it from#your current location.#")
