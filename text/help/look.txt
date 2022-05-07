@@ -1,0 +1,1 @@
+LOOK [object]#Looks at the object listed, if you can access it from#your current location.#LOOK EQUIPPED#Prints a list of your equipped objects.#Synonyms: LOOK, LOOK AT

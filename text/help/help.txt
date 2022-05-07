@@ -1,0 +1,1 @@
+HELP#Prints out a list of valid actions.#HELP [action]#Prints a description for the action.#Neither of these actions takes any time.

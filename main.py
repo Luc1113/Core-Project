@@ -1,20 +1,17 @@
 #thing without a title
 #made with love(?) by Luca and Justin
-import time
-import sys as sus
 import actions as a #functions from actions file
+import helpers as h
 
 def start_loop():
   if loops==0:
-    a.cprint(str(fileRead("text/0loop.txt")))
+    h.fileRead("text/0loop.txt")
   elif loops==1:
-    a.cprint("Placeholder text for waking up after first loop")
+    h.cprint("Placeholder text for waking up after first loop")
   else:
-    a.cprint("Placeholder text for waking up after subsequent loops.")
+    h.cprint("Placeholder text for waking up after subsequent loops.")
 
-def fileRead(file):
-  temp_file = open(file, 'r')
-  return temp_file.read()
+
 
 def get_action():
   print()
@@ -33,10 +30,10 @@ def get_action():
     elif len(action)>=2:
       a.look(action[1])
     else:
-      a.cprint("What are you looking at?")
+      h.cprint("What are you looking at?")
     
   else:
-    a.cprint("Invalid action. Use \"HELP\" to get a list of actions.")
+    h.cprint("Invalid action. Use \"HELP\" to get a list of actions.")
     get_action()
 
 def main():

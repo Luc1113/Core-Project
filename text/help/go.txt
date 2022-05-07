@@ -1,0 +1,1 @@
+GO [location]#Go to the location listed, if you can access it from#your current location.#Synonyms: GO, MOVE, WALK

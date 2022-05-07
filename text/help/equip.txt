@@ -1,0 +1,1 @@
+EQUIP [object]#Equips the object listed, if you can access it from#your current location.
