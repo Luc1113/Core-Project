@@ -12,7 +12,7 @@ class Room:
 class Object:
   def __init__(self,name):
     self.name = name
-    self.description = h.file_get("text/objects/"+self.name.lower+".txt")
+    self.description = h.file_get("text/objects/"+self.name.lower()+".txt")
 
 def make_rooms():
   rooms = []
@@ -22,4 +22,4 @@ def make_rooms():
     Object("TABLES"),
     Object("WATCH")
   ]))
-  
+  return rooms

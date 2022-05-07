@@ -2,9 +2,12 @@ import time
 import sys as sus
 
 def cprint(str):
+  global actions_taken
   for char in str:
     if char=="#":
       sus.stdout.write("\n")
+    elif char=="⌚":
+      sus.stdout.write(str(20-actions_taken))
     else:
       sus.stdout.write(char)
     sus.stdout.flush()

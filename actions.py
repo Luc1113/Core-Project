@@ -1,4 +1,5 @@
 import helpers as h
+import 
 
 def print_help(action):
   if action == "ALL":
@@ -16,5 +17,12 @@ def print_help(action):
   else:
     h.cprint("Invalid action. Use \"HELP\" to get a list of actions.")
 
-def look(action):
-  h.cprint("You look at the "+action+". It is very majestic.")
+def equip(item):
+  
+
+def look(action, room):
+  for object in room.objects:
+    if object.name == action:
+      h.cprint(object.description)
+      return
+  h.cprint("You don't see any "+action+" in this room.")
